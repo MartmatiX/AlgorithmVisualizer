@@ -56,7 +56,10 @@ public class MainWindow {
                         sorter = new SelectionSorter();
                         sorter.sort(unsortedArray, mainPanel);
                     }
-                    case KeyEvent.VK_R -> fillArray();
+                    case KeyEvent.VK_R -> {
+                        fillArray();
+                        mainPanel.repaint();
+                    }
                 }
 
             }
