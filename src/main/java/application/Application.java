@@ -9,7 +9,9 @@ public class Application {
         System.out.println("""
                 1 - Bubble sort
                 2 - Selection sort
+                3 - Insertion sort
                 R - New data
+                ESC - Exit
                 """);
     }
 

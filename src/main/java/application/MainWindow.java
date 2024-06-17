@@ -1,6 +1,7 @@
 package application;
 
 import application.sorters.BubbleSorter;
+import application.sorters.InsertionSorter;
 import application.sorters.SelectionSorter;
 import application.sorters.Sorter;
 
@@ -56,10 +57,15 @@ public class MainWindow {
                         sorter = new SelectionSorter();
                         sorter.sort(unsortedArray, mainPanel);
                     }
+                    case KeyEvent.VK_3 -> {
+                        sorter = new InsertionSorter();
+                        sorter.sort(unsortedArray, mainPanel);
+                    }
                     case KeyEvent.VK_R -> {
                         fillArray();
                         mainPanel.repaint();
                     }
+                    case KeyEvent.VK_ESCAPE -> System.exit(0);
                 }
 
             }
